@@ -9,7 +9,7 @@ let __dirname = path.dirname(__filename)
 let app = express()
 let port = 3000
 
-app.use('/static', express.static('public'))
+app.use('/static', express.static('Public'))
 
 app.get('/', (req, res) => {
     res.sendFile('./index.html', { root: __dirname })
