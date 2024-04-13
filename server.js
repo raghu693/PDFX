@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 app.post('/merge', upload.array('pdfs', 2), async (req, res, next) => {
     // res.send({data : req.files})
     let ct = await pdfmerger(path.join(__dirname, req.files[0].path), path.join(__dirname, req.files[1].path))
-    res.redirect(`http://localhost:3000/static/${ct}.pdf`)
+    res.redirect(`/static/${ct}.pdf`)
 })
 
 app.listen(port, () => {
