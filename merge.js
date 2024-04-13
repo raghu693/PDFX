@@ -7,7 +7,7 @@ let pdfmerger = async (p1, p2) => {
   await merger.add(p2)
 
   let ct = new Date().getTime()
-  await merger.save(`public/${ct}.pdf`);
+  await merger.save(`Public/${ct}.pdf`);
   return ct
 };
 
